@@ -192,11 +192,11 @@ def evenly_subsample_features(labels, features, idx, counts, seq_len, seq_stps, 
                                         ix+int(seq_len/2)]
                     Y[j, :, :] = labels[ix-int(seq_len/2):
                                         ix+int(seq_len/2)]
-        else:
-            X = np.empty((n_examples*len(np.unique(idx)),
-                        seq_stps,
-                        int(seq_len/seq_stps),
-                        n_features))
+        #else:
+         #   X = np.empty((n_examples*len(np.unique(idx)),
+          #              seq_stps,
+           #             int(seq_len/seq_stps),
+            #            n_features))
             
             Y = np.empty((n_examples*len(np.unique(idx)), labels.shape[1]))
             for j in range(n_examples*len(np.unique(idx))):
